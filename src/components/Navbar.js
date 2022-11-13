@@ -5,7 +5,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import MainSection from "./MainSection";
+import About from "./About";
+import Contact from "./Contact";
+import Projects from "./Projects";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -25,10 +27,13 @@ export default function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/About">About</Link>
+            <Link to="/About">About Me</Link>
           </li>
           <li>
-            <Link to="/Contact">Contact</Link>
+            <Link to="/Contact">Contact Me</Link>
+          </li>
+          <li>
+            <Link to="/Projects">Projects</Link>
           </li>
         </ul>
 
@@ -43,7 +48,7 @@ export default function Navbar() {
         */}
         <Routes>
           <Route exact path="/">
-            <MainSection />
+            <Home />
           </Route>
           <Route path="/About">
             <About />
@@ -51,35 +56,45 @@ export default function Navbar() {
           <Route path="/Contact">
             <Contact />
           </Route>
+          <Route path="/Projects">
+            <Projects />
+          </Route>
         </Routes>
       </div>
     </Router>
   );
 }
-
 // You can think of these components as "pages"
 // in your app.
 
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
+// function Home() {
+//   return (
+//     <div>
+//       <h2>Home</h2>
+//     </div>
+//   );
+// }
 
-function About() {
-  return (
-    <div>
-      <h2>About Me</h2>
-    </div>
-  );
-}
+// function About() {
+//   return (
+//     <div>
+//       <h2>About Me</h2>
+//     </div>
+//   );
+// }
 
-function Contact() {
-  return (
-    <div>
-      <h2>Contact Me</h2>
-    </div>
-  );
-}
+// function Contact() {
+//   return (
+//     <div>
+//       <h2>Contact Me</h2>
+//     </div>
+//   );
+// }
+
+// function Projects() {
+//     return (
+//       <div>
+//         <h2>Projects</h2>
+//       </div>
+//     );
+//   }
